@@ -11,5 +11,5 @@ export function pageCount(total: number, size: number): number {
 }
 
 export function invoiceLabel(inv: Invoice): string {
-  return `${inv.id} · ${inv.customerName ?? "unknown customer"}`;
+  return `${inv.id} · ${(inv.customerName ?? "").trim() || "unknown customer"}`;
 }
